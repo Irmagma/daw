@@ -1,5 +1,5 @@
 class daw {
-	package { "audacity":
+	package { "lmms":
         ensure => 'installed',
 	allowcdrom => true,      
  }
