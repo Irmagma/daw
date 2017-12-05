@@ -1,5 +1,6 @@
 class daw {
-        package { ‘audacity’:
-                ensure => “installed”,
-	allowcdrom => true,x      
+	package { "audacity":
+        ensure => 'installed',
+	allowcdrom => true,      
  }
+}
