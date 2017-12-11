@@ -29,15 +29,11 @@ class daw {
 	}
  	exec { 'apt-get update':
 	 command => '/usr/bin/apt-get update',
+	 require => Exec['sudo dpkg'],
 	 notify => Package['lmms'],
-	 refreshonly => true,
 	}
 	package { "lmms":
          ensure => 'installed',
 	 allowcdrom => true,
-	}
- 	exec { 'lmms':
-	 command => "/usr/bin/lmms",
-	 require => Package['lmms'],
 	}
 }
