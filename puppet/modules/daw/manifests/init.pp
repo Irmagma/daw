@@ -26,6 +26,7 @@ class daw {
  	exec { 'apt-get update':
 	 command => '/usr/bin/apt-get update',
 	 refreshonly => true,
+	 require => Exec['sudo dpkg'], 
  }
 	package { "lmms":
          ensure => 'installed',
