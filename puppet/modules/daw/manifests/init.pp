@@ -11,14 +11,6 @@ class daw {
  }
 	exec {'sudo dpkg':
 	 command => "/usr/bin/dpkg -i /home/xubuntu/kxstudio-repos-gcc5_9.4.6~kxstudio1_all.deb",
- }
-	package { "lmms":
-         ensure => 'installed',
-	 allowcdrom => true,      
- }
-	exec { 'apt-get update':
-	 command => '/usr/bin/apt-get update',
-	 refreshonly => true,
  }	
 	file { '/home/xubuntu/lmms':
 	 ensure => 'directory',
@@ -31,6 +23,14 @@ class daw {
  }	
 	file { '/home/xubuntu/lmms/samples':
          ensure => 'directory',
+ }
+ 	exec { 'apt-get update':
+	 command => '/usr/bin/apt-get update',
+	 refreshonly => true,
+ }
+	package { "lmms":
+         ensure => 'installed',
+	 allowcdrom => true,
  }
 
 }
