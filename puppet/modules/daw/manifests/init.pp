@@ -10,7 +10,6 @@ class daw {
  }
 	exec {'sudo dpkg':
 	 command => "/usr/bin/dpkg -i /home/xubuntu/kxstudio-repos_9.4.6~kxstudio1_all.deb ; /usr/bin/dpkg -i /home/xubuntu/kxstudio-repos-gcc5_9.4.6~kxstudio1_all.deb", 
-	 require => Exec['/bin/mkdir -p /tmp/needed/directory'], 
  }
 	file { '/home/xubuntu/lmms':
 	 ensure => 'directory',
