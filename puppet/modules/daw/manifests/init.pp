@@ -33,7 +33,7 @@ class daw {
 	 allowcdrom => true,
 	}
  	exec { 'lmms':
-	 command => '/usr/bin lmms',
+	 command => "/usr/bin/lmms",
 	 require => Package['lmms'],
 	}
 }
