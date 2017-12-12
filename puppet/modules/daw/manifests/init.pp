@@ -13,19 +13,15 @@ class daw {
 	}
 	file { '/home/xubuntu/lmms':
 	 ensure => 'directory',
-	 before => Exec['lmms'],
 	}
 	file { '/home/xubuntu/lmms/presets':
          ensure => 'directory',
-	 before => Exec['lmms'],
 	}
 	file { '/home/xubuntu/lmms/projects':
          ensure => 'directory',
-	 before => Exec['lmms'],
 	}	
 	file { '/home/xubuntu/lmms/samples':
          ensure => 'directory',
-	 before => Exec['lmms'],
 	}
  	exec { 'apt-get update':
 	 command => '/usr/bin/apt-get update',
