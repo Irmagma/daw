@@ -36,8 +36,4 @@ class daw {
          ensure => 'installed',
 	 allowcdrom => true,
 	}
-	exec { 'lmms':
-	 command => "/usr/bin/lmms",
-	 require => Package['lmms'],
-	}
 }
