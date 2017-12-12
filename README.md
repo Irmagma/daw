@@ -1,2 +1,3 @@
 # daw
-Digital Audio Workstation -asennusmoduuli
+
+Digital Audio Workstation (LMMS) configuring module
